@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Shopee AI Business 如何访问、使用、保存和处理 Google Drive 数据，以及如何撤销授权。">
+  <title>隐私政策 · Shopee AI Business</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip" href="#main">跳至正文</a>
+  <header><a class="brand" href="index.html">Shopee AI Business</a><nav aria-label="主导航"><a href="index.html">工具说明</a><a href="privacy.html" aria-current="page">隐私政策</a><a href="terms.html">使用条款</a></nav></header>
+  <main id="main" class="document">
+    <p class="eyebrow">Google Drive 数据与授权</p>
+    <h1>隐私政策</h1>
+    <p class="lead">本政策适用于 Shopee AI Business 个人数据处理工具及其说明网站。工具由账户持有人管理，仅处理本人有权使用的广告经营数据。</p>
+    <section><h2>1. 访问的数据和权限</h2>
+      <p>工具读取指定 Google Drive 输入目录中的广告 CSV、指定结果目录中的历史交接包，以及相关文件名、文件标识、日期、大小、版本和校验信息。数据可能包含店铺与商品标识、曝光、点击、花费、成交等经营指标。</p>
+      <p>工具申请 <code>https://www.googleapis.com/auth/drive</code> 授权，以读取已有文件并写入新结果。该 Google 权限本身允许访问和管理用户的 Drive 文件，范围比指定目录更广；目录限制由本工具的运行配置实施，并非 Google 授权界面授予的文件夹级权限。</p>
+      <p>工具不要求提供 Google 密码。用户通过 Google 官方页面登录并决定是否授权。</p>
+    </section>
+    <section><h2>2. 数据用途</h2>
+      <p>数据用于报表完整性检查、重复识别、既有规则校准、指标计算、历史接续、产品变化分析以及生成可核验的交接包。数据质量未达到发布条件时，程序记录原因并停止发布相应正式结果。</p>
+      <p>本工具不出售 Google 用户数据，不将其用于广告定向、信用评估或训练通用 AI 模型，也不通过本网站展示经营数据。</p>
+    </section>
+    <section><h2>3. 处理与保存位置</h2>
+      <ul>
+        <li><strong>Google Drive：</strong>原始报表、历史记录、校验证据、处理结果及异常状态保存在账户持有人指定的目录，按用户设置的访问权限管理。</li>
+        <li><strong>GitHub Actions：</strong>授权启用后，程序在临时运行环境中读取并处理数据。临时工作目录在程序正常退出时清理；工作流另设授权文件清理步骤。业务文件不提交到代码仓库，也不作为 Actions 构建附件或缓存长期保存。</li>
+        <li><strong>授权凭证：</strong>一次性授权在用户电脑上完成，生成的授权文件由用户保管；部署使用的授权内容保存为私有仓库的加密 Secret，运行时读取到临时文件。</li>
+        <li><strong>运行记录：</strong>GitHub 保留工作流状态、处理日期和错误代码等必要运行信息。详细业务校验结果保存在 Drive；运行日志不主动输出原始报表、指标明细或授权内容。</li>
+      </ul>
+    </section>
+    <section><h2>4. 服务提供方与后续分析</h2>
+      <p>Google 提供文件存储和账户授权服务，GitHub 提供私有代码托管、加密凭证存储和临时计算环境。这些服务提供方在各自服务条款及隐私政策下处理相关信息。</p>
+      <p>账户持有人可以通过另行授权的 ChatGPT 连接和分析任务读取 Drive 交接包。这属于用户配置的独立流程，适用相应账户的服务条款和数据设置；本处理程序不直接把数据发送到 AI 模型接口。本政策不替代这些服务提供方的政策。</p>
+      <p>数据不会通过本说明网站公开，也不向无关第三方出售或提供；因用户指示、必要服务提供或适用法律要求而发生的数据处理除外。</p>
+    </section>
+    <section><h2>5. 保存期限、撤销与删除</h2>
+      <p>Drive 中的源文件和结果保留至账户持有人主动删除；日常流程不自动清除历史。GitHub 运行记录按该账户的保留设置保存。电脑上的授权文件由用户自行删除，仓库 Secret 保留至用户删除或替换。</p>
+      <p>用户可在 <a href="https://myaccount.google.com/connections">Google 账户的第三方连接管理</a>中撤销本工具授权。停用 GitHub 工作流并删除相应 Secret，可停止后续任务使用这些凭证。撤销授权不会自动删除已生成的 Drive 文件；需要时请另行删除这些文件及其回收站副本。</p>
+      <p>对访问、更正或删除有疑问，请通过本页末尾的联系方式联系工具管理员。</p>
+    </section>
+    <section><h2>6. 说明网站</h2>
+      <p>本网站仅提供静态说明，没有登录表单、上传入口或分析追踪脚本。网站使用 GitHub Pages 托管时，GitHub 会为安全目的记录访问者的 IP 地址等访问日志，详见 <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub 隐私声明</a>。</p>
+    </section>
+    <section><h2>7. Google 用户数据政策</h2>
+      <p>本工具对通过 Google API 获得的信息的使用和转移遵守 <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API 服务用户数据政策</a>及其中的有限使用要求。若工具的数据处理方式改变，本政策会随之更新；涉及新权限时需由用户另行授权。</p>
+    </section>
+    <section><h2>8. 联系方式</h2><p>工具名称：Shopee AI Business<br>管理与隐私联系：<a href="mailto:ruixitao617@gmail.com">ruixitao617@gmail.com</a></p></section>
+  </main>
+  <footer><span>政策版本：2026年10月28日</span><a href="index.html">工具说明</a><a href="terms.html">使用条款</a></footer>
+</body>
+</html>

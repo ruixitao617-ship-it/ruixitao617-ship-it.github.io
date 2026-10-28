@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Shopee AI Business 是账户持有人自用的广告数据整理工具。本页介绍工具用途、Google Drive 授权和数据处理方式。">
+  <title>Shopee AI Business · 工具说明</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip" href="#main">跳至正文</a>
+  <header><a class="brand" href="index.html">Shopee AI Business</a><nav aria-label="主导航"><a href="index.html" aria-current="page">工具说明</a><a href="privacy.html">隐私政策</a><a href="terms.html">使用条款</a></nav></header>
+  <main id="main">
+    <p class="eyebrow">个人自用 · 广告数据整理</p>
+    <h1>把原始报表整理成<br>可核验的每日记录。</h1>
+    <p class="lead">Shopee AI Business 帮助账户持有人整理自己上传到 Google Drive 的 Shopee 广告 CSV，检查数据、计算指标并接续历史记录，为后续经营分析提供依据。</p>
+    <p class="notice">这是工具介绍页面。数据处理由账户持有人另行授权和启用；本网站不提供登录、数据上传或公开报表功能。</p>
+    <section>
+      <h2>工具如何工作</h2>
+      <ol class="steps">
+        <li><strong>上传原始报表</strong><span>账户持有人将广告 CSV 放入自己指定的 Google Drive 输入目录。</span></li>
+        <li><strong>检查并计算</strong><span>程序在 GitHub Actions 中检查店铺、统计日期、报表完整性及重复内容，使用既有规则校准和汇总数据。</span></li>
+        <li><strong>保存已验证的结果</strong><span>程序将每日摘要、产品分析、校验证据和历史累计写回指定的 Google Drive 结果目录，回读核验后记录完成状态。</span></li>
+      </ol>
+    </section>
+    <section>
+      <h2>为什么需要 Google Drive 授权</h2>
+      <p>工具需要读取已有的原始报表和历史交接文件，并创建新的处理结果。Google 授权范围为 Drive 文件读写；程序通过配置限定工作目录。具体权限、保存方式和撤销方法见<a href="privacy.html">隐私政策</a>。</p>
+      <p>后续 ChatGPT 分析由账户持有人通过独立的连接和任务配置完成。本处理程序不直接调用 AI 模型接口，也不自动调整广告预算、采购或店铺运营。</p>
+    </section>
+    <section>
+      <h2>使用范围与联系</h2>
+      <p>本工具仅供账户持有人处理自己有权使用的数据，不向公众开放注册。它是独立的个人项目，并非 Shopee、Google 或 GitHub 的官方产品。</p>
+      <p>工具管理与隐私联系：<a href="mailto:ruixitao617@gmail.com">ruixitao617@gmail.com</a></p>
+    </section>
+  </main>
+  <footer><span>说明版本：2026年10月28日</span><a href="privacy.html">隐私政策</a><a href="terms.html">使用条款</a></footer>
+</body>
+</html>
